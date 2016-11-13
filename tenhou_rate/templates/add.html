@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{error}}
+
+<form action="/add/" method="post">
+
+     <select name="name_one">
+        {%for player in players%}
+         <option value="{{player.name}}">{{player.name}}</option>
+         {%endfor%}
+     </select>
+     <input name="rate_one">
+    <br>
+
+     <select name="name_two">
+        {%for player in players%}
+         <option value="{{player.name}}">{{player.name}}</option>
+         {%endfor%}
+     </select>
+     <input name="rate_two">
+    <br>
+
+     <select name="name_three">
+        {%for player in players%}
+         <option value="{{player.name}}">{{player.name}}</option>
+         {%endfor%}
+     </select>
+     <input name="rate_three">
+    <br>
+
+     <select name="name_four">
+        {%for player in players%}
+         <option value="{{player.name}}">{{player.name}}</option>
+         {%endfor%}
+     </select>
+     <input name="rate_four">
+    <br>
+
+     <input type="submit" value="Add"/>
+    {%csrf_token%}
+</form>
+
+<a href="/">back</a>
+
+</body>
+</html>
