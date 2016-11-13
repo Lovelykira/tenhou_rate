@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+{% if request.user.is_superuser %}
 {{error}}
 
 <form action="/add/" method="post">
@@ -44,7 +45,9 @@
      <input type="submit" value="Add"/>
     {%csrf_token%}
 </form>
-
+{%else%}
+sorry not sorry
+{%endif%}
 <a href="/">back</a>
 
 </body>

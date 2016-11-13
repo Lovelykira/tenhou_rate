@@ -32,6 +32,13 @@ class AddGame(View):
             players = Player.objects.all()
             error = "ERROR PLAYERS NAME"
             return render(request, 'add.html', {'players': players, 'error':error})
+        
+
+        if rates[0]+rates[1]+rates[2]+rates[3]!=0:
+            players = Player.objects.all()
+            error = "ERROR SUM OF POINTS MUST BE 0"
+            return render(request, 'add.html', {'players': players, 'error':error})
+
 
         for i in range(4):
             try:
