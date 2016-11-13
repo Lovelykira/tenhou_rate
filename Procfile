@@ -1,1 +1,1 @@
-web: python articles_sharing_django/manage.py runserver 0.0.0.0:$PORT
+web: python tenhou_rate/manage.py runserver 0.0.0.0:$PORT
