@@ -75,9 +75,9 @@ WSGI_APPLICATION = 'tenhou_rate.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES = {}
-DATABASES['default'].update(db_from_env)
+DATABASES['default'] =  dj_database_url.config()
+DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
 #DATABASES = {
 #    'default': {
