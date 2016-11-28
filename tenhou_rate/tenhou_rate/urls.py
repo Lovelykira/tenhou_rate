@@ -21,5 +21,6 @@ from main.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', MainView.as_view()),
-    url(r'^add/$', AddGame.as_view())
+    url(r'^add/$', AddGame.as_view()),
+    url(r'^games/$', ViewGames.as_view()),
 ]

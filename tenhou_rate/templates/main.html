@@ -6,11 +6,15 @@
 </head>
 <body>
 {%for player in players%}
-{{player.name}} : {{player.rate}} <br>
+{{player.name}} : {{player.total_rate}} <br>
 {%endfor%}
 
 <br>
 
-<a href="/add/">Add game</a>
+<a href="/add/">Add game</a> <br>
+<a href="/games/">Games</a> <br>
+{%if not request.user.is_authenticated%}
+<a href="/admin/">Login</a> <br>
+{%endif%}
 </body>
 </html>
